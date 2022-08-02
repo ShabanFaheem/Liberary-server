@@ -38,7 +38,9 @@ app.put("/book/:id", book.updateBook);
 
 app.delete("/book/:id", book.deleteBook);
 
-app.put("/book/borrow/:id", book.borrowBook)
+app.put("/book/borrow/:id", book.borrowBook);
+
+app.get("/book/borrowed/:id" , book.borrowedBooks);
 
 app.listen(5000, () => {
   console.log("server listening at port 5000.");
